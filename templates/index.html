@@ -1,0 +1,19 @@
+{{ define "content" }}
+
+<p class="lead">
+  <a href="/thread/new">Start a thread</a> or the link below to join
+</p>
+{{ range . }}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <span class="lead"><i class="fa fa-comment-o"></i> {{ .Topic }}</span>
+    </div>
+    <div class="panel-body">
+      Initiating User: {{ .User.Name }} -Started {{ .CreateAtDate }} -Number Posted {{ .NumReplies }}.
+      <div class="pull-right">
+        <a href="/thread/read?id={{ .Uuid }}">More</a>
+      </div>
+    </div>
+  {{ end }}
+
+{{ end }}
