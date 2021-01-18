@@ -2,8 +2,8 @@ package main
 
 import (
 	// package "data"
+	"github.com/s-shiki/myapp/data"
 	"net/http"
-	"text/template"
 )
 
 func index(w http.ResponseWriter, r *http.Request) {
